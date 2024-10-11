@@ -21,22 +21,34 @@ How do different segments and categories perform? Insights reveal that the Corpo
 What shipping methods are most utilized? Analysis shows that Standard Class is the predominant shipping method, accounting for the majority of customer orders.
 Data Analysis:
 SQL
+
 SELECT
+
 SUM(total_sales) AS total_sales,
+
 SUM(total_profit) AS total_profit
+
 FROM
 sales_data_table;
 
+
 SELECT
 segment,
+
 SUM(total_sales) AS total_sales,
+
 SUM(total_profit) AS total_profit
+
 FROM
 sales_data_table
+
+
 GROUP BY
 segment
 ORDER BY
+
 total_profit DESC;
+
 
 The first SQL query calculates the total sales and total profit across all transactions. The second query analyzes performance by segment, allowing for the identification of the most profitable customer segments. This data is crucial for understanding the sales dynamics and profitability across different categories and segments in the superstore.
 
